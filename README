@@ -1,1 +1,16 @@
 Komunikator - projekt na systemy operacyjne.
+Tresc zadania:
+Komunikator [15]
+Napisz prosty komunikator "speak" wykorzystujący łącza nazwane. Zadaniem programu jest wysyłanie krótkich informacji do znajomych. Przykładowe wywołanie programu powinno wyglądać
+./speak od [do] -parametr "wiadomość"
+gdzie:
+    od - nick/numer użytkownika wysyłającego wiadomość
+    [do] - lista użytkowników do których wiadomość ma dotrzeć np: {Tomek, Bartek, Ania}
+    -parametr - wysłanie wiadomości z odpowiednią opcją
+    "wiadomość" - informacja którą chcemy przesłać.
+Użytkownik może przeczytać wiadomości które otrzymał wpisując ./speak nick history. Każda wiadomość wysyłana jest dopiero gdy druga strona może ją odczytać i po przeczytaniu zostaje automatycznie skasowana (wynika to z użycia kolejki). Program powinien poprzez uruchomienie: ./speak create nick  stworzyć użytkownika.
+a) [8] dodanie parametrów
+        -copy : kopia wysłanej wiadomości zostanie wysłana również do samego siebie
+        -return: kiedy odbiorca przeczyta wiadomość wysyłane jest potwierdzenie przeczytania dla           nadawcy
+b) [7]
+    Każdy użytkownik posiada książkę adresową, którą można zarządzać poprzez np. ./speak user add/remove nick(friend) oraz ./speak user show_friendlist. Lista użytkowników zapisywana jest w pliku tekstowym. Użytkownik może wysyłać wiadomości do wszystkich ludzi ze swojej listy poprzez ./speak od all -parametr "wiadomość".
